@@ -20,6 +20,8 @@ jobs:
       - name: 'Install requirements'
         run: pip install -r ./requirements.txt
       - name: 'Working-invite'
+        env:
+          SERVER_KEY: ${{secrets.SERVER_KEY}}
         run: python WPS_accept_invitation.py
 #       - name: 'Working-signin'
 #         env: 
