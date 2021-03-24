@@ -42,7 +42,7 @@ print('成功邀请%d位好友'%(mk))
 SERVER_KEY = os.getenv('SERVER_KEY')
 if SERVER_KEY:
     data = {
-        'text':'WPS邀请好友任务：成功邀请到%d位好友'%(mk),
-        'desp':'成功邀请%d位好友'%(mk)
+        'text':'WPS任务：'%(mk),
+        'desp':'你已经成功邀请%d位好友参加WPS打卡'%(mk)
     }
     requests.post('https://sc.ftqq.com/%s.send'%(SERVER_KEY.strip()), data = data)
