@@ -20,9 +20,14 @@ WPS 有一个免费领会员的活动，关注微信小程序“我的WPS会员�
 3. Fork 完后会直接跳转到你的项目页面中，点击上方 Actions，开启workflow
 4. 点击文件 WPS_accept_invitation.py。将第一行 'invite_userids = [ID1, ID2]' 括号中的数字改成自己的会员 ID，多个账号用英文的逗号隔开，保存修改即可
 
-# 微信推送邀请结果：
-1. 如果想接收邀请任务的结果，可以微信关注“server 酱”，访问 http://sc.ftqq.com/?c=code ，微信登录后，在“发送消息”页面获取 SCKEY 的值。
+# 手机接收邀请结果：
+## SERVER 酱
+1. 微信关注“server 酱”，访问 http://sc.ftqq.com/?c=code ，微信登录后，在“发送消息”页面获取 SCKEY 的值。
 2. 在本页面上方 Settings → Secrets 中点击 New repository secret ，Name 填写 “**SERVER_KEY**”（不带引号），Value 中填写上一步获取的 SCKEY 值。
+
+## Bark
+1. 手机下载 Bark APP（我用的 ios，Android 不知道有没有），获取推送链接（类似这个 https://api.day.app/xxxxxxxxxxxxx ）；
+2. 在本页面上方 Settings → Secrets 中点击 New repository secret ，Name 填写 “**BARK_URL**”（不带引号），Value 中填写上一步获取的链接。
 
 # 每 60 天需要重新激活一下
 ![](https://user-images.githubusercontent.com/30107520/108630795-9f885200-74a1-11eb-85b3-7e9386f7fa05.jpg)  

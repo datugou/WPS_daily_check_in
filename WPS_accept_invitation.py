@@ -26,7 +26,7 @@ def request_re(sid, invite_userid, rep = 30):
     js = json.loads(r.content)
     if js['msg'] == 'tryLater' and rep > 0:
         rep -= 1
-        time.sleep(2)
+        time.sleep(10)
         r = request_re(sid, invite_userid, rep)
     return r
 
@@ -46,3 +46,9 @@ if SERVER_KEY:
         'desp':'成功邀请%d位好友'%(mk)
     }
     requests.post('https://sc.ftqq.com/%s.send'%(SERVER_KEY.strip()), data = data)
+
+BARK_URL = os.getenv('BARK_URL')
+if BARK_URL:
+    text = 'WPS邀请好友任务：成功邀请到%d位好友'%(mk)
+    bark_url = BARK_URL[:-1] if BARK_URL.endswith('/') else BARK_URL
+    requests.get(bark_url + '/%s'%(text))
