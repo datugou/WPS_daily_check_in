@@ -38,7 +38,7 @@ for i in invite_userids:
             if js['result'] == 'ok':
                 mk += 1
         except:
-            print('错误：',sys.exc_info())
+            print('发生未知错误')
             
 print('成功邀请%d位好友'%(mk))   
 
