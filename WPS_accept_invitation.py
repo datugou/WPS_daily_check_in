@@ -39,7 +39,6 @@ for i in invite_userids:
                 mk += 1
         except:
             print(sys.exc_info())
-            return
             
 print('成功邀请%d位好友'%(mk))   
 
