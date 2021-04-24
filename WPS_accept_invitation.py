@@ -1,3 +1,4 @@
+# encoding: utf-8
 invite_userids = [244668941]
 
 import json, os, time
