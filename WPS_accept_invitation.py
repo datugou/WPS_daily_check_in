@@ -37,8 +37,7 @@ for i in invite_userids:
             js = json.loads(r.content)
             if js['result'] == 'ok':
                 mk += 1
-        except:
-            print('发生未知错误')
+        except:pass
             
 print('成功邀请%d位好友'%(mk))   
 
