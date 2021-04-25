@@ -21,7 +21,7 @@ sids = [
 mk = 0
 
 def request_re(sid, invite_userid, rep = 30):
-    invite_url = 'http://zt.wps.cn/2018/clock_in/api/invite'
+    invite_url = '{"rcb":"https:\/\/zt.wps.cn\/2018\/clock_in\/api\/invite%EF%BC%8C%E8%BF%99%E4%B8%AA%E6%8E%A5%E5%8F%A3%E4%B8%8B%E7%9A%84%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF%E4%BD%93%E9%87%8C%E9%9D%A2"}'
     r = requests.post( invite_url, headers={ 'sid': sid }, data={ 'invite_userid': invite_userid, "client_code": "040ce6c23213494c8de9653e0074YX30", "client": "alipay" } )
     js = json.loads(r.content)
     if js['msg'] == 'tryLater' and rep > 0:
