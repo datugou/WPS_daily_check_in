@@ -67,3 +67,4 @@ def request_re(sid, invite_userid, rep = 30):
 
 ---
 #### 本来想做全自动打卡，但是查了 github 上其它项目后，发现打卡需要一个验证 code ，获取该 code 要调用微信内部方法 wx.login()。没办法破解，有没有大佬提供其它思路。
+
